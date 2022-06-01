@@ -1,0 +1,5 @@
+.shadow-cljs/
+target/
+node_modules/
+scripts/
+shadow-cljs.edn

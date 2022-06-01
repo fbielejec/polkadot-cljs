@@ -1,0 +1,9 @@
+export DEPLOY_ENV="dev"
+export LOGGING_LEVEL="debug"
+
+export WS_RPC_HOST="wss://ws-smartnet.test.azero.dev"
+
+export ACCOUNT_ID="5D2ZNVZ5xnMrs9SRJvVSe9ACnsbhTwmdC2PmeC1MXJVt8Drf"
+export SEED_PHRASE="bottom drive obey lake curtain smoke basket hold race lonely fit walk//Filip"
+
+export CONTRACT_ARTIFACT="flipper/target/ink/flipper.contract"

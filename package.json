@@ -1,0 +1,24 @@
+{
+  "name": "deploy",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "deps": "yarn install --frozen-lockfile",    
+    "watch": "shadow-cljs watch deploy",
+    "start" : "node scripts/deploy.js",
+    "clean": "git clean -fdx"
+  },
+  "dependencies": {
+    "@polkadot/api": "8.5.1",
+    "@polkadot/api-contract": "8.5.1"
+  },
+  "devDependencies": {
+    "shadow-cljs": "2.19.0"
+  },
+  "engines": {
+    "node": ">=17.0.0"
+  },
+  "comments": {
+    "engine": "current minimal version of node"
+  }
+}
