@@ -7,3 +7,6 @@
   (-> (fs/readFileSync path "utf8")
       js/JSON.parse
       (js->clj :keywordize-keys true)))
+
+(defn write-file [content file]
+  (.writeFileSync fs file content))
