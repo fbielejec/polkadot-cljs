@@ -1,0 +1,23 @@
+{
+  "name": "hex-to-wasm",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "deps": "yarn install --frozen-lockfile",
+    "watch": "shadow-cljs watch hex-to-wasm",
+    "start": "node hex-to-wasm.js /home/filip/CloudStation/aleph/aleph-node/contracts/button_token/target/ink/button_token.contract /home/filip/CloudStation/aleph/aleph-node/contracts/button_token/target/ink/button_token.wasm",
+    "release": "./release.sh"
+  },
+  "dependencies": {
+    "@polkadot/util": "9.4.1"
+  },
+  "devDependencies": {
+    "shadow-cljs": "2.19.0",
+    "terser-webpack-plugin": "5.3.3",
+    "webpack": "5.73.0",
+    "webpack-cli": "4.10.0"
+  },
+  "engines": {
+    "node": ">=17.0.0"
+  }
+}

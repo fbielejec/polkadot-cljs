@@ -1,5 +1,8 @@
 .shadow-cljs/
-target/
+cljs-runtime/
+deploy.js
+hex-to-wasm.js
 node_modules/
-scripts/
 shadow-cljs.edn
+target/
+yarn-error.log
