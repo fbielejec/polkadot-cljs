@@ -1,6 +1,6 @@
-(ns deploy.polkadot.contracts
+(ns polkadot.contracts
   (:require ["@polkadot/api-contract" :refer (CodePromise)]
-            [deploy.utils :refer [promise->]]))
+            [shared.utils :refer [promise->]]))
 
 (defn code-promise [^js api abi wasm]
   (new CodePromise api abi wasm))

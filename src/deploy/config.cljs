@@ -1,5 +1,5 @@
 (ns deploy.config
-  (:require [deploy.utils :refer [get-env-variable]]))
+  (:require [shared.utils :refer [get-env-variable]]))
 
 (defn load! []
   (let [environment (or (get-env-variable "DEPLOY_ENV") "dev")

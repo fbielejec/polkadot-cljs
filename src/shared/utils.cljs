@@ -1,4 +1,4 @@
-(ns deploy.utils
+(ns shared.utils
   (:require-macros [deploy.utils]))
 
 (defn -js->clj+

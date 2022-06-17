@@ -1,4 +1,4 @@
-(ns deploy.logging
+(ns shared.logging
   (:require [taoensso.timbre :as timbre]))
 
 #_(defn log-field?

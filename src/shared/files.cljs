@@ -1,4 +1,4 @@
-(ns deploy.files
+(ns shared.files
   (:require ["fs" :as fs]))
 
 (defn read-json

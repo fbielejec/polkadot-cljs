@@ -1,4 +1,4 @@
-(ns deploy.polkadot.api
+(ns polkadot.api
   (:require ["@polkadot/api" :refer [ApiPromise WsProvider Keyring ContractPromise]]
             [deploy.utils :refer [promise->]]))
 

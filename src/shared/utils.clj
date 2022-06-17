@@ -1,4 +1,4 @@
-(ns deploy.utils)
+(ns shared.utils)
 
 (defn compiletime-info
   [and-env and-form ns]

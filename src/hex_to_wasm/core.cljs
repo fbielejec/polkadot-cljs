@@ -1,5 +1,6 @@
 (ns hex-to-wasm.core
-  (:require [cljs.nodejs :as nodejs]))
+  (:require ["@polkadot/" :refer (CodePromise)]
+   [cljs.nodejs :as nodejs]))
 
 (nodejs/enable-util-print!)
 

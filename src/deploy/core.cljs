@@ -1,11 +1,11 @@
 (ns deploy.core
-  (:require [deploy.logging :as logging]
+  (:require [shared.logging :as logging]
             [deploy.config :as config]
             [taoensso.timbre :as log]
-            [deploy.polkadot.api :as api]
-            [deploy.polkadot.contracts :as contracts]
-            [deploy.files :as files]
-            [deploy.utils :refer [promise-> ]]))
+            [polkadot.api :as api]
+            [polkadot.contracts :as contracts]
+            [shared.files :as files]
+            [shared.utils :refer [promise-> ]]))
 
 (defn start!
   "called by main and after reloading the code"
