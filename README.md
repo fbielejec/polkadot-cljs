@@ -29,3 +29,12 @@ Get the REPL:
 ```
 M-x cider-connect-clojurescript
 ```
+
+## Release ##
+
+### hex-to-wasm script
+
+```bash
+cd scripts/hex-to-wasm
+yarn release
+```
