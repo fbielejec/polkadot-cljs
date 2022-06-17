@@ -1,0 +1,7 @@
+{:skip-comments true
+ :linters       {:single-key-in                {:level :error}
+                 :unsorted-required-namespaces {:level :warning}
+                 ;; :unused-namespace             {:exclude [hiccups.runtime]}
+                 :unresolved-symbol            {:exclude [(cljs.core.match/match)]}
+                 ;; :lint-as                      {mount.core/defstate clojure.core/def}
+                 }}
