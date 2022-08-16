@@ -21,6 +21,12 @@ cd scripts/keccak256
 yarn release
 ```
 
+### USAGE EXAMPLE ###
+
+```bash
+node keccak256 FU bar
+```
+
 ## hex-to-wasm ##
 
 ### Development ###
