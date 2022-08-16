@@ -1,0 +1,59 @@
+{:source-paths ["src"]
+ :jvm-opts     ["-Xmx2G"]
+ :dependencies [[refactor-nrepl "2.5.0"]
+                [cider/cider-nrepl "0.26.0"]
+                [cider/piggieback "0.5.2"]
+                [viesti/timbre-json-appender "0.2.6"]
+                [com.taoensso/timbre "4.10.0"]]
+
+ :nrepl {:middleware [cider.piggieback/wrap-cljs-repl
+                      refactor-nrepl.middleware/wrap-refactor]}
+
+ :http {:port 3449
+        :host "0.0.0.0"}
+
+ :cache-blockers #{deploy.config
+                   ;; hex-to-wasm.config
+                   }
+
+ :builds {:deploy
+          {:target     :node-script
+           :hashbang   false
+           :js-options {:js-package-dirs ["./deploy/node_modules"]}
+           :output-dir "scripts/deploy"
+           :output-to  "scripts/deploy/deploy.js"
+           :main       deploy.core/main
+           :devtools   {:after-load   deploy.core/start!
+                        :before-load  deploy.core/stop!
+                        :repl-init-ns deploy.core}
+           :release    {:compiler-options {:output-feature-set :es6
+                                           :warnings-as-errors true
+                                           :infer-externs      :auto
+                                           :optimizations      :advanced}}}
+          :hex-to-wasm
+          {:target     :node-script
+           :hashbang   false
+           :js-options {:js-package-dirs ["./hex-to-wasm/node_modules"]}
+           :output-dir "scripts/hex-to-wasm"
+           :output-to  "scripts/hex-to-wasm/hex-to-wasm.js"
+           :main       hex-to-wasm.core/main
+           :devtools   {:after-load   hex-to-wasm.core/start!
+                        :before-load  hex-to-wasm.core/stop!
+                        :repl-init-ns hex-to-wasm.core}
+           :release    {:compiler-options {:output-feature-set :es6
+                                           :warnings-as-errors true
+                                           :infer-externs      :auto
+                                           :optimizations      :advanced}}}
+          :keccak256
+          {:target     :node-script
+           :hashbang   false
+           :js-options {:js-package-dirs ["./keccak256/node_modules"]}
+           :output-dir "scripts/keccak256"
+           :output-to  "scripts/keccak256/keccak256.js"
+           :main       keccak256.core/main
+           :devtools   {:after-load   keccak256.core/start!
+                        :repl-init-ns keccak256.core}
+           :release    {:compiler-options {:output-feature-set :es6
+                                           :warnings-as-errors true
+                                           :infer-externs      :auto
+                                           :optimizations      :advanced}}}}}

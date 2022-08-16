@@ -1,8 +1,9 @@
 .shadow-cljs/
+bin/
 cljs-runtime/
 deploy.js
 hex-to-wasm.js
+keccak256.js
 node_modules/
-shadow-cljs.edn
 target/
 yarn-error.log

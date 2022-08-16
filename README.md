@@ -1,22 +1,29 @@
-## Development ##
+## keccak256 ##
 
-### deploy script
+### Development ###
 
 ```bash
-cd scripts/deploy
+cd scripts/keccak256
 yarn deps
 yarn watch
-source ../../env/dev
 yarn start
 ```
 
 Get the REPL:
-
 ```
 M-x cider-connect-clojurescript
 ```
 
-### hex-to-wasm script
+### Release ###
+
+```bash
+cd scripts/keccak256
+yarn release
+```
+
+## hex-to-wasm ##
+
+### Development ###
 
 ```bash
 cd scripts/hex-to-wasm
@@ -26,13 +33,12 @@ yarn start
 ```
 
 Get the REPL:
+
 ```
 M-x cider-connect-clojurescript
 ```
 
-## Release ##
-
-### hex-to-wasm script
+### Release ###
 
 ```bash
 cd scripts/hex-to-wasm
